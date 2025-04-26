@@ -1,7 +1,5 @@
-# Pre-requisite -
-Node - 22.5.7 or above version should be present on your local
+# To setup and run test cases -
 
-To setup and run test cases -
 1. Go to root directory of the project
 2. Run ```npm install```
 3. Run ```npm run install-playwright```
