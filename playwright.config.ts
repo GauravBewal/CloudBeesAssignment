@@ -1,13 +1,21 @@
 import {devices, defineConfig} from '@playwright/test';
+// import { allureStorageDir, allureResultsPattern } from 'allure-playwright';
+import * as path from 'path';  // Import the path module
 
 
 export default defineConfig({
   testDir: './tests',
   timeout: 60000,
   retries: 1, // Retry flaky tests once
-  reporter: 'html', // You can add other reporters here as well
-  // Configure parallel execution
+// Configure parallel execution
 //   workers: process.env.CI ? 2 : undefined,
+  reporter: [
+    ['list'],
+    ['allure-playwright', {
+        outputDir: path.join(__dirname, 'allure-results'), // Use an absolute path
+        suiteTitle: 'CloudBees Report'
+    }],
+  ],
 
   // 'use' is the shared section for all the projects 
   use: {

@@ -20,7 +20,8 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.52.0",
-    "@types/node": "^23.10"
+    "@types/node": "^22.15.0",
+    "allure-playwright": "^2.13.0"
   },
   "dependencies": {
     "typescript": "^5.4.3"
